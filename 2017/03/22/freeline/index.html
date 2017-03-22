@@ -14,10 +14,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/22/freeline/index.html">
 <meta property="og:site_name" content="hades_fei">
 <meta property="og:description" content="Freeline出于阿里的秒量级编译插件，同级于Android Studio的instant run目前为止还不太成熟，但用上速度还是嗖嗖的。">
-<meta property="og:updated_time" content="2017-03-22T07:13:27.265Z">
+<meta property="og:image" content="http://i.imgur.com/mu67q6f.jpg">
+<meta property="og:updated_time" content="2017-03-22T09:55:58.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="freeline">
 <meta name="twitter:description" content="Freeline出于阿里的秒量级编译插件，同级于Android Studio的instant run目前为止还不太成熟，但用上速度还是嗖嗖的。">
+<meta name="twitter:image" content="http://i.imgur.com/mu67q6f.jpg">
   
     <link rel="alternative" href="/atom.xml" title="hades_fei" type="application/atom+xml">
   
@@ -173,18 +175,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Freeline出于阿里的秒量级编译插件，同级于Android Studio的instant run目前为止还不太成熟，但用上速度还是嗖嗖的。<br><a id="more"></a></p>
+        <p>Freeline出于阿里的秒量级编译插件，同级于Android Studio的instant run目前为止还不太成熟，但用上速度还是嗖嗖的。<br> <img src="http://i.imgur.com/mu67q6f.jpg" width="300" height="200" alt="图片名称" align="center"><br><a id="more"></a></p>
 <h1 id="1-编译环境"><a href="#1-编译环境" class="headerlink" title="1.编译环境"></a>1.编译环境</h1><p>win + python2.7 + android studio</p>
 <h1 id="2-在Android-studio上配置"><a href="#2-在Android-studio上配置" class="headerlink" title="2.在Android studio上配置"></a>2.在Android studio上配置</h1><h3 id="在工程的build-gradle里面添加"><a href="#在工程的build-gradle里面添加" class="headerlink" title="在工程的build.gradle里面添加"></a>在工程的build.gradle里面添加</h3><pre><code>classpath &apos;com.antfortune.freeline:gradle:0.8.6
 </code></pre><h3 id="在app的build-gradle里面添加插件和依赖"><a href="#在app的build-gradle里面添加插件和依赖" class="headerlink" title="在app的build.gradle里面添加插件和依赖"></a>在app的build.gradle里面添加插件和依赖</h3><pre><code>apply plugin: &apos;com.antfortune.freeline&apos;//顶部
 compile &apos;com.antfortune.freeline:runtime:0.6.0&apos;
 </code></pre><p>添加完成之后同步下工程，在application的oncreate()中添加初始化<br>    FreelineCore.init(this);</p>
-<h1 id="3初始化freeeline到工程"><a href="#3初始化freeeline到工程" class="headerlink" title="3初始化freeeline到工程"></a>3初始化freeeline到工程</h1><p>在Terminal或者工程文件根部的cmd中使用命令<br>    gradlew initFreeline -Pmirror  //参数(Pmirror)下载国内镜像<br>会下载一会，出现<code>BUILD SUCCESSFUL</code>表示成功</p>
-<h1 id="4编译"><a href="#4编译" class="headerlink" title="4编译"></a>4编译</h1><p>编译运行到手机<br>    python freeline.py</p>
-<h1 id="5命令"><a href="#5命令" class="headerlink" title="5命令"></a>5命令</h1><pre><code>gradlew.bat initFreeline //初始化
+<h1 id="3-初始化freeeline到工程"><a href="#3-初始化freeeline到工程" class="headerlink" title="3.初始化freeeline到工程"></a>3.初始化freeeline到工程</h1><p>在Terminal或者工程文件根部的cmd中使用命令<br>    gradlew initFreeline -Pmirror  //参数(Pmirror)下载国内镜像<br>会下载一会，出现<code>BUILD SUCCESSFUL</code>表示成功</p>
+<h1 id="4-编译"><a href="#4-编译" class="headerlink" title="4.编译"></a>4.编译</h1><p>编译运行到手机<br>    python freeline.py</p>
+<h1 id="5-命令"><a href="#5-命令" class="headerlink" title="5.命令"></a>5.命令</h1><pre><code>gradlew.bat initFreeline //初始化
 python freeline.py //增量编译并部署至手机
 python freeline.py -f //全量编译并部署至手机
-</code></pre>
+</code></pre><h1 id="借鉴前辈资源"><a href="#借鉴前辈资源" class="headerlink" title="借鉴前辈资源"></a>借鉴前辈资源</h1><p><a href="https://segmentfault.com/a/1190000007185691" title="freeline 快速入门 - 初体验" target="_blank" rel="external">https://segmentfault.com/a/1190000007185691</a></p>
+
       
 
       
@@ -275,16 +278,6 @@ python freeline.py -f //全量编译并部署至手机
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/2017/03/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown模板</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 
 
